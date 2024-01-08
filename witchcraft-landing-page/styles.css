@@ -1,0 +1,190 @@
+*, *::before, *::after {
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color:#181818;
+    margin: 0;
+}
+
+/* =================
+    Typography 
+   ================= */
+h2 {
+    font-family: 'Rouge Script', cursive;
+    font-size:5rem;
+    margin: 0.137em 0;
+    font-weight: 400;
+    text-shadow: 0 1px #202020;
+    
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+a {
+    color:#fff;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#8a71ec;
+}
+.beta-text { 
+    font-size:0.5rem;
+    font-weight:600;
+    letter-spacing:0.2rem;
+    padding-bottom:0;
+}
+
+.subheading {
+    color: #181818;
+    font-weight: 900;  
+    margin-bottom: 0.5em;
+}
+.beta-text,
+.top-text,
+.subheading {
+    text-transform: uppercase;
+}
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    order: -1;
+    margin: 0 auto;
+    letter-spacing:0.2rem;
+}
+
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
+.intro,
+.main-content {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 2em;
+    padding-right: 2em;   
+}
+
+/* =================
+    Intro
+   ================= */
+
+.intro { 
+    justify-content: space-between;
+    min-height: 250px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px #e6e8ec;
+    background: #202020 url("images/potions.jpg");
+    background-size: cover;
+    padding-bottom: 1.5em;
+}
+
+/* ====================
+    Main content
+   ==================== */
+   
+.main-content {
+    align-items: center;
+    padding-top: 2.5em;
+}
+
+.img-main {
+    width: 120px;
+    height: 120px;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
+}
+
+/* =================
+    Form
+   ================= */
+
+input,
+button {
+    font-family: inherit;
+    width: 100%; 
+    border-radius: 5px;   
+}
+
+input {
+    padding: 0.5em;
+    margin-bottom: 0.75em;
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #181818;
+    margin-top: 1em;    
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #8a71ec;
+}
+
+/* =================
+    Media queries 
+   ================= */
+
+@media (min-width: 576px) {
+    body {
+        display: flex;
+    }
+    
+    h2 {
+        font-size: 10vw;
+    }
+    
+    .beta-text {
+        font-size: 1.25rem;
+    }
+    .subheading {
+        font-size:1.8vw;
+    }
+    .intro,
+    .main-content {
+        width: 50%;
+    }
+    
+    .intro {
+        min-height: 100vh;
+    }
+    
+    .main-content {
+        justify-content: center;
+        padding-top: 0;
+    }
+}
